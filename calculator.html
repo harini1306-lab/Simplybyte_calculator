@@ -88,7 +88,14 @@
 
   <script>
     const result = document.getElementById('result');
-
+// Converts the entered number into a percentage value
+function calculatePercentage() {
+  try {
+    result.value = parseFloat(result.value) / 100;
+  } catch {
+    result.value = "Error";
+  }
+}
     function appendValue(val) {
       result.value += val;
     }
